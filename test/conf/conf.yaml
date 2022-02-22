@@ -1,0 +1,11 @@
+configs:
+ - ../../../OscDisplay/conf/conf.yaml
+ - ../../../MemoryFree/conf/conf.yaml
+ - ../../../Sample/conf/conf.yaml
+ - ../../../TFT/conf/conf.yaml
+ - ../../../arduino-printf/conf/conf.yaml
+ - ../../../arduino-logger/conf/conf.yaml
+
+cflags:
+ - -I$(CURDIR)
+ - -DHAS_LOGGER
