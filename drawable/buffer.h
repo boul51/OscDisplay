@@ -35,12 +35,12 @@ public:
 
 	void setSampleAt(geometry::Coordinate x, sample::Sample sample)
 	{
-		if (m_samples.size() > x) {
+		if (static_cast<sample::Sample>(m_samples.size()) > x) {
 			// Sample index already exists, overwrite it
 			m_samples[x] = sample;
 		} else {
 			// Fill with empty samples until requested position
-			while (m_samples.size() < x)
+			while (static_cast<sample::Sample>(m_samples.size()) < x)
 				m_samples.push_back(minSampleValue);
 			m_samples.push_back(sample);
 		}
